@@ -1,8 +1,11 @@
-# Thunderbird_South_Image_Processing
-This repository contains data M8(Lagoon Nebula) from UBC's Thunderbird South Telescope and a jupyter lab file with code to process this data. Learn more about
+# Thunderbird South Image Processing
+This repository contains data M8(Lagoon Nebula) from UBC's Thunderbird South Telescope and a JupyterLab file with code to process this data. Learn more about
 UBC's Thunderbird South [here]([https://link-url-here.org](https://thunderbirdsouth.phas.ubc.ca/))
 
 This repo also includes the complete solution code for the workshop, which includes code that is run to precalibrate the fits data from the telescope
+
+This code was developed both for the purposes of my own learning and teaching the process of image calibration and telescope data processing to get 
+the pictures of deep space we all like seeing
 
 ---
 
@@ -27,7 +30,7 @@ In this workshop, you’ll:
 | **Dark Frames** | Measure thermal noise from the camera and remove it from science images. |
 | **Flat Frames** | Correct for uneven illumination and dust on optics. |
 | **Science Frames** | The real observations - what we actually want to study! |
-| **Sigma Clipping** | Removes outlier pixels (e.g. cosmic rays, satellite trails). |
+| **Sigma Clipping** | Removes outlier pixels (e.g, cosmic rays, satellite trails). |
 | **BVR Color Composition** | Combine separate Blue, Visual (Green), and Red filters to form a realistic color image. |
 
 ---
@@ -35,8 +38,8 @@ In this workshop, you’ll:
 
 ### Cloning the Repo
 
-There are big files on this repo. To clone this repo you need to import git large file storage(lfs).
-Run the folowing code in your terminal
+There are big files in this repo. To clone this repo, you need to import git large file storage(lfs).
+Run the following code in your terminal
 based on your operating system
 
 <u> On MacOS </u>
@@ -81,4 +84,18 @@ sudo apt-get install git-lfs
 
 ---
 
+## Result
+
+Thunderbird South collects CCD (charge-coupled device) data using an array of light-sensitive pixels to capture photons, which are converted into an electrical charge.
+So the actual data we get is a measure of photon intensity per pixel. This gives us a single value per pixel, which we can use to generate a  greyscale image. In the workshop,
+you see exactly how we process the data. The greyscale for the visual(V) filter looks as follows:
+
+![Greyscale](./images/greyscale.png)
+
+However, we are all used to seeing those colorful pictures of outer space. If telescopes only collect data for greyscale images, then how do we get those colored ones?
+We use different filters! If we use a red filter with out telescope, the telescope only records the higher wavelengths of light (red light). Similar filters can be applied to get a
+measure of how much green and blue light there is. If we layer this data on top of each other and stack them together, we can get an RGB(color) composite. In the workshop,
+you see exactly how we stack calibrated BVR filter data to get a color composite. The color image looks as follows:
+
+![Greyscale](./images/color.png)
 
