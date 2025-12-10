@@ -1,6 +1,6 @@
 # Thunderbird South Image Processing
 This repository contains data M8(Lagoon Nebula) from UBC's Thunderbird South Telescope and a JupyterLab file with code to process this data. Learn more about
-UBC's Thunderbird South <a target="_blank" href="https://thunderbirdsouth.phas.ubc.ca/"></a>https://thunderbirdsouth.phas.ubc.ca/
+UBC's Thunderbird South <a target="_blank" href="https://thunderbirdsouth.phas.ubc.ca/">here</a>.
 
 This repo also includes the complete solution code for the workshop, which includes code that is run to precalibrate the fits data from the telescope
 
